@@ -1,3 +1,5 @@
+### Alocação de Avaliadores para Projetos
+
 Este projeto é uma aplicação em Python para a alocação automática de avaliadores a projetos em um contexto de avaliação por categorias e restrições de distrito.
 
 Descrição
@@ -32,7 +34,7 @@ Como Usar?
 | E       | 5678     | Cat5      |
 
 
-A aplicação processa arquivos CSV contendo informações dos avaliadores e dos projetos e gera arquivos de alocação detalhada, que indicam quais avaliadores avaliarão quais projetos.
+
 
 
 Para dúvidas, sugestões ou contribuições, entre em contato:
