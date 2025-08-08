@@ -1,6 +1,14 @@
 import streamlit as st
 import pandas as pd
 
+# -------- Exibe o README.md no topo, se existir --------
+try:
+    with open("README.md", "r", encoding="utf-8") as f:
+        readme_text = f.read()
+    st.markdown(readme_text)
+except FileNotFoundError:
+    st.warning("README.md não encontrado. Atualize o arquivo para mostrar as instruções aqui.")
+
 AVALIADORES_POR_PROJETO = 5  # quantos avaliadores por projeto
 
 def pode_avaliar(av, dist_projeto, cat_projeto):
@@ -73,3 +81,4 @@ if uploaded_avaliadores and uploaded_projetos:
 
         csv2 = agrupado.to_csv(index=False).encode('utf-8')
         st.download_button("Download CSV agrupado por avaliador", csv2, "alocacao_por_avaliador.csv", "text/csv")
+
